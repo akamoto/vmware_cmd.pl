@@ -1,0 +1,13 @@
+Script to list, start, stop and restore the latest snapshot of build vms.
+
+You have to download and install vSphere SDK for Perl
+https://www.vmware.com/support/developer/viperltoolkit/
+
+The script contains no build logic but assumes to be run by your build scripts
+to start and stop build vms and - if you do set up your environment in this way
+- to restore the build vm to a clean state after a unsuccessful build.
+
+If you do want to use the restore functions, don't forget to make a snapshot
+after installing the build-tools and dev-libs, configuring your proxy-settings,
+etc.
+
