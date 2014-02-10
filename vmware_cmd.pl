@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Markus.Mueller@consol.de, 2012
+# Markus.Mueller@consol.de, 2014
 # VMWare cmds for the monitoring build environment
 
 use warnings;
@@ -13,9 +13,7 @@ $Data::Dumper::Indent=1;
 use Config::General;
 
 # If you get errors connecting to vcenter as the following:
-# Server version unavailable at
-# 'https://vcenter.virt.consol.de:443/sdk/vimService.wsdl' at
-# /opt/perl/lib/site_perl/5.16.1/VMware/VICommon.pm line 545.
+# Server version unavailable at 'https://<hostname>:443/sdk/vimService.wsdl' at /path/to/VMware/VICommon.pm line 545.
 # Try this:
 #$ENV{'PERL_LWP_SSL_VERIFY_HOSTNAME'} = 0;
 
