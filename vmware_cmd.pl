@@ -125,17 +125,16 @@ Opts::add_options(%opts);
 Opts::parse();
 Opts::validate();
 
+if ( defined Opts::get_option('delay') ){
+  sleep Opts::get_option('delay');
+}
+
 # login vcenter
 my $vim = Vim::login(
     service_url => $cfg->{'vcenter_url'},
     username    => $cfg->{'vcenter_username'},
     password    => $cfg->{'vcenter_password'},
 );
-
-if ( defined Opts::get_option('delay') ){
-  sleep Opts::get_option('delay');
-}
-
 
 if ( defined Opts::get_option('list') ){
         my $all = Opts::get_option('all');
